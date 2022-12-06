@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+   <script src="https://unpkg.com/vue@3"></script>
+   <meta charset="UTF-8">
+   <meta http-equiv="X-UA-Compatible" content="IE=edge">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <link rel="stylesheet" href="style.css" />
+   <script crossorigin src="https://unpkg.com/react@17/umd/react.development.js"></script>
+   <script crossorigin src="https://unpkg.com/react-dom@17/umd/react-dom.development.js"></script>
+   <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+   <title>Germantown Blood Bank</title>
+</head>
+
+<body>
+   <!--This is the resource guide I used for styling https://www.makeuseof.com/responsive-navigation-bar-using-html-and-css/ and I also got assistance from a Comp Sci/IT 
+        professor for some minor changes-->
+   <nav class="navBar">
+      <!-- This is the logo-->
+      <a href="index.html"><img src="assets/logo.png" id="logo" alt="A blood droplet and the words Germantown Blood Bank"></a>
+      <!-- Beginning of navigation menu -->
+      <ul class="navBar-links">
+         <input type="checkbox" id="toggleForCheckbox" />
+         <label for="toggleForCheckbox" class="threeLines">&#9776;</label>
+         <!-- Menu for the navigation bar -->
+         <div class="menu">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="aboutus.html">About Us</a></li>
+            <li><a href="contact.html">Contact</a></li>
+         </div>
+      </ul>
+      <!-- End of the navigation bar-->
+   </nav>
+
+   <div class="backgStylingAbout">
+      <h2 class="headerContact">About us.</h2>
+      <br>
+      <br>
+      <p>Germantown Bloodbank is a not-for-profit 501(c)(3) community asset located in the old
+         Germantown Hospital at La Salle University. It is responsible for providing safe, available and quick blood
+         draws.
+         We are in partnership with Einstein Hopsital. Safety of the blood supply is our top
+         priority. Every unit
+         of blood undergoes more than a dozen tests to ensure it is safe for transfusion. Regardless of
+         where the blood is donated in our service area, all blood samples are delivered via a
+         courier to a trusted partner of
+         Einstein's.</p>
+      <br>
+      <p>We welcome the members of the community to become donors and are extremely grateful to
+         all of our employees, friends from the community and students who assist our Blood Bank. You can
+         schedule an appointment below to donate blood. We provide a day of the week you can
+         choose and three or more times that may
+         be convenient. Walk-ins are always welcome
+         but on weekends, holidays and after 4 pm on weekdays please contact
+         us.</p>
+   </div>
+
+   <h2 class="headerContact">Frequently Asked Questions About Donating Blood</h2>
+   <!-- Makes use of accordians and help was sourced from https://www.w3schools.com/howto/howto_js_accordion.asp-->
+   <br>
+   <button class="accordion">How much blood is taken during a blood donation?</button>
+   <div class="panel">
+      <p>A little less than one pint of blood is taken for each whole blood donation.</p>
+   </div>
+
+   <button class="accordion">How much blood is in my body?</button>
+   <div class="panel">
+      <p>The average adult has between 9-12 pints of blood, depending on the person’s weight. To better understand your
+         blood volume use the resources below.</p>
+   </div>
+
+   <button class="accordion">How long will it take my body to replenish my lost blood?</button>
+   <div class="panel">
+      <p>The blood volume is typically replaced within 24 hours. Red blood cells take between four to six weeks for
+         complete replacement, which is why the FDA requires an eight-week wait between blood donations. Your body will
+         not be affected adversely by the loss of the pint of blood.</p>
+   </div>
+
+   <button class="accordion">How long does donating blood take?</button>
+   <div class="panel">
+      <p>If you schedule a possible appointment on our form on the front page, the entire process will take about 30-40
+         minutes (for whole blood donations). The actual donation takes about five to seven minutes.</p>
+   </div>
+
+   <button class="accordion">What types of blood donation does the Germantown Bloodbank have?</button>
+   <div class="panel">
+      <p>
+         <ul>
+            <li>Whole Blood Donation</li>
+            <li>Power Red Donation</li>
+            <li>Platelet Donation</li>
+            <li>AB Elite Plasma Donation</li>
+         </ul>
+      </p>
+   </div>
+   </div>
+
+   <script>
+      //This script pushes the accordian down when you click on the panel 
+      let acc = document.getElementsByClassName("accordion");
+      let i;
+
+      for (i = 0; i < acc.length; i++) {
+         acc[i].addEventListener("click", function () {
+            this.classList.toggle("active");
+            var panel = this.nextElementSibling;
+            if (panel.style.display === "block") {
+               panel.style.display = "none";
+            } else {
+               panel.style.display = "block";
+            }
+         });
+      }
+   </script>
+   <br />
+   <br />
+
+   <h2 class="headerContact">How Much Blood Volume Do You Have?</h2>]
+   <br>
+   <br>
+   <p>Use this calculator to determine how much blood volume you have. If you do not know your height in inches, use the
+      chart below.</p>
+   <br>
+   <!-- Uses tables and rows as well as columns; info sourced from https://www.w3schools.com/html/html_tables.asp-->
+   <table style="width:100%">
+      <tr>
+         <th>Height</th>
+         <th>Inches</th>
+      </tr>
+      <tr>
+         <td>4'10"</td>
+         <td>58"</td>
+      </tr>
+      <tr>
+         <td>4'11"</td>
+         <td>59"</td>
+      </tr>
+      <tr>
+         <td>5'0"</td>
+         <td>60"</td>
+      </tr>
+      <tr>
+         <td>5'1"</td>
+         <td>61"</td>
+      </tr>
+      <tr>
+         <td>5'2"</td>
+         <td>62"</td>
+      </tr>
+      <tr>
+         <td>5'3"</td>
+         <td>63"</td>
+      </tr>
+      <tr>
+         <td>5'4"</td>
+         <td>64"</td>
+      </tr>
+      <tr>
+         <td>5'5"</td>
+         <td>65"</td>
+      </tr>
+      <tr>
+         <td>5'6"</td>
+         <td>66"</td>
+      </tr>
+      <tr>
+         <td>5'7"</td>
+         <td>67"</td>
+      </tr>
+      <tr>
+         <td>5'8"</td>
+         <td>68"</td>
+      </tr>
+      <tr>
+         <td>5'9"</td>
+         <td>69"</td>
+      </tr>
+      <tr>
+         <td>5'10"</td>
+         <td>70"</td>
+      </tr>
+      <tr>
+         <td>5'11"</td>
+         <td>71"</td>
+      </tr>
+      <tr>
+         <td>6'0"</td>
+         <td>72"</td>
+      </tr>
+      <tr>
+         <td>6'1"</td>
+         <td>73"</td>
+      </tr>
+      <tr>
+         <td>6'2"</td>
+         <td>74"</td>
+      </tr>
+      <tr>
+         <td>6'3"</td>
+         <td>75"</td>
+      </tr>
+      <tr>
+         <td>6'4"</td>
+         <td>76"</td>
+      </tr>
+      <tr>
+         <td>6'5"</td>
+         <td>77"</td>
+      </tr>
+   </table>
+   <br />
+   <!-- This uses the Vue library of JS and I built a little calculator that uses the Nadler blood formula and it references the js file calculation to do the math -->
+   <div id="vue_calculation">
+      <form>
+         <p>This determines the total blood amount in your body based on the Nadler formula, it is based on your gender,
+            weight in lbs, and height in inches. Please reference this before deciding to donate blood.</p>
+         <p>Gender: </p><select v-model="gender_selection">
+            <option disabled value="">Select</option>
+            <option value="Male">Male</option>
+            <option value="Female">Female</option>
+         </select>
+         <br>
+         <!-- Gets the inputted number value and uses an event and some regex to ensure that only numeral values are accepted; uses a less cleaner and lazier form of preventing this input -->
+         <!-- Solution to allowing only the input of numbers in Vue was found here: https://developpaper.com/question/in-vue-input-how-to-limit-input-to-number-only/ -->
+         <p>Weight (lbs):</p>
+         <input type="number" v-model.number="weight" :value="weight"
+            @input="weight = $event.target.value.replace(/[^\d]/g,'');$event.target.value = weight" />
+         <br>
+        <p>Height (in):</p>
+         <input type="number" v-model.number="height" :value="height"
+            @input="height = $event.target.value.replace(/[^\d]/g,'');$event.target.value = height" />
+      </form>
+      <br />
+      <input v-if="!display" id="calcbutton" type="button" value="Calculate" v-on:click="blood_calculation">
+      <script src="calculation.js"></script>
+</body>
+
+</html>

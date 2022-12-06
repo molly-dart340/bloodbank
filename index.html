@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css" />
+    <script crossorigin src="https://unpkg.com/react@17/umd/react.development.js"></script>
+    <script crossorigin src="https://unpkg.com/react-dom@17/umd/react-dom.development.js"></script>
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+    <title>Germantown Blood Bank</title>
+</head>
+
+<body>
+    <!--This is the resource guide I used for styling https://www.makeuseof.com/responsive-navigation-bar-using-html-and-css/ and I also got assistance from a Comp Sci/IT 
+        professor for some minor changes-->
+    <nav class="navBar">
+        <!-- This is the logo-->
+        <a href="index.html"><img src="assets/logo.png" id="logo" alt="A blood droplet and the words Germantown Blood Bank"></a>
+        <!-- Beginning of navigation menu -->
+        <ul class="navBar-links">
+            <input type="checkbox" id="toggleForCheckbox" />
+            <label for="toggleForCheckbox" class="threeLines">&#9776;</label>
+            <!-- Menu for the navigation bar -->
+            <div class="menu">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="aboutus.html">About Us</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </div>
+        </ul>
+        <!-- End of the navigation bar-->
+    </nav>
+    <div class="heroSlideContainer">
+        <div class="mySlides">
+            <img src="assets/slideshowimage1.jpg" class="pictures">
+            <div class="hero-text">
+                <div class="banner">
+                    <h1 class="headerRegistration"><a href="#formRegistration">Register to donate today!</a></h1>
+                </div>
+            </div>
+        </div>
+
+        <div class="mySlides" id="pic2">
+            <img src="assets/slideshowimage2.jpg" class="pictures">
+            <div class="hero-text">
+                <div class="banner">
+                <h1 class="headerRegistration"><a href="aboutus.html">Learn more about us.</a></h1>
+                </div>
+            </div>
+        </div>
+
+        <!-- Uses an onclick function that changes the index and corresponds to the function plusSlides-->
+        <a class="previousButton" onclick="plusSlides(-1)">❮</a>
+        <a class="nextButton" onclick="plusSlides(1)">❯</a>
+    </div>
+    <div class="backg1">
+        <script>
+            let slideIndex = 1;
+            showSlides(slideIndex);
+
+            function plusSlides(n) {
+                showSlides(slideIndex += n);
+            }
+
+            function showSlides(n) {
+                let slides = document.getElementsByClassName("mySlides");
+
+                if (n > slides.length) { slideIndex = 1 }
+                if (n < 1) { slideIndex = slides.length }
+
+                for (let i = 0; i < slides.length; i++) {
+                    slides[i].style.display = "none";
+                }
+
+                slides[slideIndex - 1].style.display = "block";
+            }
+        </script>
+        <div class="backgStyling1">
+            <h2 id="header1">Find the blood donaton center on La Salle University's Campus</h2>
+            <p id="paragraph1">Located near Septa transportation our blood donation center is easily reachable.</p>
+            <a href="contact.html"><button class="button">Search Now</button></a>
+        </div>
+        <div class="backgStyling2">
+            <br>
+            <br>
+            <h3 class="infoHeading" id="formRegistration">REQUEST AN APPOINTMENT</h3>
+            <div id="divBloodFormOrder" class="wrapper"></div>
+            <script type="text/babel" src="blooddonation.js"></script>
+        </div>
+
+        <div class="backgStyling3">
+            <!-- Credit to this YouTube video (https://www.youtube.com/watch?v=guLHWEBO0pg) for helping me create a responsive 3 image layout as I only knew how to do 4 columns -->
+            <h2 id="div3Header">Photo Gallery</h2>
+            <br>
+            <div class="row">
+                <div class="allColumns">
+                    <img src="assets/photogallery1.jpeg" style="width:100%" id="photogallery1">
+                </div>
+                <div class="allColumns">
+                    <img src="assets/photogallery2.jpeg" style="width:100%" id="photogallery2">
+                </div>
+                <div class="allColumns">
+                    <img src="assets/photogallery3.jpg" style="width:100%" id="photogallery3">
+                </div>
+            </div>
+            <div class="row">
+                <div class="allColumns">
+                    <img src="assets/photogallery4.jpg" style="width:100%" id="photogallery4">
+                </div>
+                <div class="allColumns">
+                    <img src="assets/photogallery5.jpg" style="width:100%" id="photogallery5">
+                </div>
+                <div class="allColumns">
+                    <img src="assets/photogallery6.jpg" style="width:100%" id="photogallery6">
+                </div>
+            </div>
+
+        </div>
+
+        <!-- The Modal itself for the images-->
+        <div id="myModal" class="modal">
+            <span class="close">&times;</span>
+            <img class="modal-content" id="img01">
+        </div>
+
+        <script>
+            // Get the modal image from the gallery
+            var modal = document.getElementById("myModal");
+
+            // Get the image and insert it inside the modal 
+            var img = document.getElementById("myImg");
+            var modalImg = document.getElementById("img01");
+            photogallery1.onclick = function () {
+                modal.style.display = "block";
+            }
+            photogallery2.onclick = function () {
+                modal.style.display = "block";
+                modalImg.src = this.src;
+            }
+            photogallery3.onclick = function () {
+                modal.style.display = "block";
+                modalImg.src = this.src;
+            }
+            photogallery4.onclick = function () {
+                modal.style.display = "block";
+                modalImg.src = this.src;
+            }
+            photogallery5.onclick = function () {
+                modal.style.display = "block";
+                modalImg.src = this.src;
+            }
+            photogallery6.onclick = function () {
+                modal.style.display = "block";
+                modalImg.src = this.src;
+            }
+
+            // Get the <span> element that closes the modal
+            var span = document.getElementsByClassName("close")[0];
+
+            // When the user clicks on <span> (x), close the modal
+            span.onclick = function () {
+                modal.style.display = "none";
+            }
+        </script>
+</body>
+
+</html>

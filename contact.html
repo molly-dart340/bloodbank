@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css" />
+    <script crossorigin src="https://unpkg.com/react@17/umd/react.development.js"></script>
+    <script crossorigin src="https://unpkg.com/react-dom@17/umd/react-dom.development.js"></script>
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+    <title>Germantown Blood Bank</title>
+</head>
+
+<body>
+    <!--This is the resource guide I used for styling https://www.makeuseof.com/responsive-navigation-bar-using-html-and-css/ and I also got assistance from a Comp Sci/IT 
+        professor for some minor changes-->
+    <nav class="navBar">
+        <!-- This is the logo-->
+        <a href="index.html"><img src="assets/logo.png" id="logo" alt="A blood droplet and the words Germantown Blood Bank"></a>
+        <!-- Beginning of navigation menu -->
+        <ul class="navBar-links">
+            <input type="checkbox" id="toggleForCheckbox" />
+            <label for="toggleForCheckbox" class="threeLines">&#9776;</label>
+            <!-- Menu for the navigation bar -->
+            <div class="menu">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="aboutus.html">About Us</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </div>
+        </ul>
+        <!-- End of the navigation bar-->
+    </nav>
+
+    <!--This is the contact information area and lists out how to contact the blood bank -->
+    <div class="contactMethods">
+        <h2 class="headerContact">Contact us.</h2>
+        <p class="paragraphContact">We're here to answer your questions and to help you make a blood donation easier.
+        </p>
+        <br>
+        <br>
+        <h3 class="h4Header">Ways to Contact Us</h3>
+        <p class="paragraphContact">There are three ways to contact us to find out more information.</p>
+        <br>
+        <h4 class="h4Header">1. Call us on the phone</h4>
+        <br>
+        <p class="paragraphContact">Call us on the phone number provided here at 215-123-4567. We will try to answer the
+            phone as frequently as we can.</p>
+        <br>
+        <h4 class="h4Header">2. Email us on your smart device.</h4>
+        <br>
+        <p class="paragraphContact">You can contact us through email. Our email is
+            germantownbloodbank@einstein.edu.</p>
+        <br>
+        <br>
+        <br>
+    </div>
+
+    <!-- I attempted to use the Google API but you needed to set up an account so I used the iframe method instead and refernced the old Germantown Hospital on campus and did another
+    form using the React ibrary-->
+    <div class="backgStyling1Contact">
+        <h2 class="headerContact">Contact Form and Donation Center Location</h2>
+        <br>
+        <div class="contactRow">
+            <div class="contactColumn">
+                <div id="divContactForm" class="wrapper2"></div>
+                <script type="text/babel" src="contactform.js"></script>
+            </div>
+    <!-- I cannot find the tutorial but I used one time help me create the iFrame and I used the two column layout which would be mobile friendly and responsively stack -->
+            <div class="contactColumn">
+                <iframe
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3054.5698094027243!2d-75.1596528!3d40.04038319999999!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x729225b96f18be3a!2sGermantown%20Medical%20Center!5e0!3m2!1sen!2sus!4v1669922881815!5m2!1sen!2sus"
+                    width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"
+                    referrerpolicy="no-referrer-when-downgrade"></iframe>
+            </div>
+        </div>
+</body>
+
+</html>

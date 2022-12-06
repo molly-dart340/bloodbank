@@ -1,0 +1,29 @@
+{
+    "bloodtype":[
+    {"type":"O negative"},
+    {"type":"A negative"},
+    {"type":"A positive"},
+    {"type":"B positive"},
+    {"type":"AB negative"},
+    {"type":"AB positive"}
+    ],
+    "donationDay":[
+    {"day":"Monday"}, 
+    {"day":"Tuesday"}, 
+    {"day":"Wednesday"}, 
+    {"day":"Thursday"}, 
+    {"day":"Friday"}, 
+    {"day":"Saturday"}, 
+    {"day":"Sunday"}
+    ],
+    "donationTimes":[
+    {"time":"7:30 AM"}, 
+    {"time":"8:30 AM"}, 
+    {"time":"9:30 AM"}, 
+    {"time":"10:30 AM"}, 
+    {"time":"11:30 AM"},
+    {"time":"12:30 PM"},
+    {"time":"1:30 PM"},
+    {"time":"2:30 PM"}
+    ]
+    }
